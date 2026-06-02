@@ -27,5 +27,10 @@ function getDay() {
     return new Date().getDate();
 }
 
+function geMinutes() {
+    return new Date().getMinutes();
+}
+
+console.log(getMinutes())
 console.log(getMonth())
 console.log(getDay())
