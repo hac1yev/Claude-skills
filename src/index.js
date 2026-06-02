@@ -23,4 +23,9 @@ function getMonth() {
 
 getYear();
 
+function getDay() {
+    return new Date().getDate();
+}
+
 console.log(getMonth())
+console.log(getDay())
