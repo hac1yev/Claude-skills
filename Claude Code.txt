@@ -1,0 +1,105 @@
+1. /init
+
+- Read entire codebase, create CLAUDE.md file and put all the instructions inside this file
+
+
+2. Shift + Tab Shift + Tab = Plan Mode
+
+- Claude will do much more research over the content of your project, reading more files and coming up with a detailed plan and how to complete your task 
+
+
+3. Thinking
+
+from "Less thinking" to  "More thinking":
+
+"Think"
+"Think more"
+"Think a lot"
+"Think longer"
+"Ultrathink"
+
+"Thinking" boost Claude's intelligence by enabling thinking. This turns on Claud's extended thinking feature. 
+We can enable "Thinking" by asking directly in chat. 
+
+
+4. Difference between Plan mode and Thinking?
+
+- Plann mode is useful when you have a task that requires a wide understanding of your codebase and requires looking at different areas. It's also useful when working on a task  that requires several steps to complete.
+- Thinking is useful when you are focusing on a particular tricky bit of logic or troubleshooting a difficult bug.
+
+*Consider that together using "plan mode" and "thinking" consume additional tokens.
+
+
+5. Esc
+
+- Stops(Interrupts) Claude allowing you to redirect it or give alternative instructions.
+Also useful to fix issues with # memories.
+
+6. #
+
+- Add a memory to the Claude.md file, helping Claude avoid this error (next time) in the future.
+
+
+7. @
+
+- Search files.
+
+
+8. Esc + Esc
+
+- Removes context not relevant to the current task.
+For example: You go back in history find message 
+(Write tests for the "createSession" function) and change 
+it into (Write tests for the "getSession" function).
+
+
+9. /compact
+
+- This command will take all the messages in the current conversation and summarize them. Compact is really useful when Claude has learned a lot about the current task and you want to maintain that knowledge as it goes into the next task.
+
+
+10. /clear
+
+- Clear conversation history and free up context. This command is useful when you're about to start on a completely different task unrelated to the current one.
+
+
+11. Custom commands
+
+- Claude Code comes with built-in commands that you can access by typing a forward slash (/clear, /compact and etc.), 
+but you can also create your own custom commands to automate repetitive tasks you run frequently.
+
+Creating Custom Commands:
+To create a custom command, you need to set up a specific folder structure in your project:
+
+Find the ".claude" folder in your project directory
+Create a new directory called "commands" inside it
+Create a new markdown file with your desired command name (like audit.md)
+The filename becomes your command name - so audit.md creates the /audit command.
+
+
+12. "mcp__playwright"
+
+- Take action without asking for usage of playwright tool
+
+// settings.json
+{
+    "permissions": {
+        "allow": ["mcp__playwright"],
+        "deny": []
+    }
+}
+
+
+Example propmpt: Your goal is to improve component generation prompt at @src\lib\prompts\generation.tsx . Here is how:  Open a browser and navigate to          localhost:3000, request a basic component to be generated, review the generated component and its source code, identify areas for improvement, Update the prompt to produce better components going forward.  For now only evaluate visual styling aspects. We don't want components generated that look like typical tailwindcss components - we want something more original.
+
+
+13. Claude GitHub
+
+- Claude code has an official GitHub integration that allows Claude code to run inside of a GitHub action. We can set up this integration by running:
+
+/install-github-app
+
+It has 2 steps:
+
+- Install Claude code app on GitHub
+- Add Claude API_KEY secret to GitHub repository that you wanna use Claude.
