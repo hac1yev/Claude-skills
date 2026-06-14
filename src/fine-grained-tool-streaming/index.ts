@@ -92,7 +92,7 @@ async function readAssistantStream(stream: any) {
   const assistantContent = new Map<number, any>();
   const toolInputJson = new Map<number, string>();
 
-  for await (const event of stream) {
+  for await (const event of stream) {    
     if (event.type === "content_block_delta" && "text" in event.delta) {
       process.stdout.write(event.delta.text);
 
