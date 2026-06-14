@@ -24,7 +24,7 @@ We can enable "Thinking" by asking directly in chat.
 
 4. Difference between Plan mode and Thinking?
 
-- Plann mode is useful when you have a task that requires a wide understanding of your codebase and requires looking at different areas. It's also useful when working on a task  that requires several steps to complete.
+- Plan mode is useful when you have a task that requires a wide understanding of your codebase and requires looking at different areas. It's also useful when working on a task  that requires several steps to complete.
 - Thinking is useful when you are focusing on a particular tricky bit of logic or troubleshooting a difficult bug.
 
 *Consider that together using "plan mode" and "thinking" consume additional tokens.
