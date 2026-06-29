@@ -5,7 +5,7 @@ import fs from 'fs';
 const client = new Anthropic();
 
 const image = fs.readFileSync(
-    path.join(process.cwd(), 'public', 'prop1.png')
+    path.join(process.cwd(), 'public', 'images', 'prop1.png')
 );
 
 const response = await client.messages.create({
