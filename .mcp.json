@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "src/mcp/index.ts"
+      ]
+    }
+  }
+}
